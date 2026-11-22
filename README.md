@@ -12,3 +12,4 @@ npx ts-node src/index.ts
 |---|---|---|---|---|
 | M. Raykhan Sabilah Hafizh| 263140700111025 | @RaykhannHfz | ... | - |
 | Sahid Paramarta | 231407071110886 | @Ramarta | ... | - |
+| Fizri Fauziatul Hijriah | 263140707111093 | @fizrifauziatul | ... | - |
