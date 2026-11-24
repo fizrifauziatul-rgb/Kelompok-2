@@ -1,0 +1,23 @@
+{
+  "name": "uas_pemdas_t1h_kelompok-2",
+  "version": "1.0.0",
+  "description": "Aplikasi console berbasis TypeScript untuk mengelola reservasi tiket konser.\r UAS Pemrograman Dasar - Teknologi Informasi, Fakultas Vokasi, Universitas Brawijaya.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fizrifauziatul-rgb/UAS_PEMDAS_T1H_KELOMPOK-2.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/fizrifauziatul-rgb/UAS_PEMDAS_T1H_KELOMPOK-2/issues"
+  },
+  "homepage": "https://github.com/fizrifauziatul-rgb/UAS_PEMDAS_T1H_KELOMPOK-2#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}
