@@ -12,4 +12,4 @@ npx ts-node src/index.ts
 |---|---|---|---|---|
 | M. Raykhan Sabilah Hafizh| 263140700111025 | @RaykhannHfz | Membuat dan menyusun Laporan, Menambahkan Tipe data pada program | - |
 | Sahid Paramarta | 263140707111088 | @Ramarta | ... | - |
-| Fizri Fauziatul Hijriah | 263140707111093 | @fizrifauziatul | ... | - |
+| Fizri Fauziatul Hijriah | 263140707111093 | @fizrifauziatul | menyusun flowvhart, menambahkan fungsi dan variabel pendukung| - |
