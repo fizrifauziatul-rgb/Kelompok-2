@@ -6,6 +6,7 @@ import * as readline from 'readline';
 type Kategori= "VIP" | "FESTIVAL" | "REGULER"
 
 interface Reservasi {
+  namaKonser: string;
   id: string;
   namaPemesan: string;
   kategoriTiket: Kategori;
@@ -20,6 +21,41 @@ const HARGA_FESTIVAL = 200000;
 const HARGA_REGULER = 100000;
 const BATAS_DISKON_ROMBONGAN = 5;
 const PERSEN_DISKON = 10;
+
+// fungsi bantu sama variabel pendukung 
+const daftarReservasi: Reservasi[] = [];
+const pembaca = readline. createInterface({ input: process.stdin, output:process.stdout })
+let counterId: number = 0;
+
+function tanya(pertanyaan: string): Promise<string> {
+  return new Promise((resolve) => pembaca.question(pertanyaan, resolve));
+}
+
+function tampilkanGaris(): void {
+  console.log("=".repeat(40));
+}
+
+function buatIdUnik(): string {
+  counterId++;
+  return "RSV" + String(counterId).padStart(3, "0");
+}
+
+function hargaPerKategori(kategori: Kategori): number {
+  if (kategori === "VIP") return HARGA_VIP;
+  if (kategori === "FESTIVAL") return HARGA_FESTIVAL;
+  return HARGA_REGULER;
+}
+
+function hitungTotalBayar(harga: number, jumlah: number): number {
+  let total: number = harga * jumlah;
+  if (jumlah >= BATAS_DISKON_ROMBONGAN){
+    total = total - (total * PERSEN_DISKON) / 100; // diskon rombongan
+  }
+  return total;
+}
+
+// tambah reservasi
+function tampilkanSemua()
 
 // DATA AWAL
 function muatDataAwal(): void {
@@ -62,6 +98,13 @@ function tampilkanMenu(): void {
   tampilkanGaris();
 }
 
+async function tambahReservasi(): Promise<void> { console.log("(belum dibuat)"); }
+function tampilkanSemua(): void { console.log("(belum dibuat)"); }
+async function lihatDetail(): Promise<void> { console.log("(belum dibuat)"); }
+async function ubahReservasi(): Promise<void> { console.log("(belum dibuat)"); }
+async function hapusReservasi(): Promise<void> { console.log("(belum dibuat)"); }
+async function cariReservasi(): Promise<void> { console.log("(belum dibuat)"); }
+
 async function jalankanMenu(): Promise<void> {
   let selesai: boolean = false; // penanda kapan perulangan berhenti
   // Ulangi menu selama pengguna belum memilih keluar
@@ -99,3 +142,6 @@ async function jalankanMenu(): Promise<void> {
   }
   pembaca.close(); // tutup pembaca input agar program benar-benar berhenti
 }
+
+muatDataAwal();
+jalankanMenu();
